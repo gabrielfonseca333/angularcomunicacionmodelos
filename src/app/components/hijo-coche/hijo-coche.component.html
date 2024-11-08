@@ -1,0 +1,17 @@
+<div class="card col-6 mx-auto" style="padding: 10px;">
+  <h2>{{car.modelo}}</h2>
+  <h2 [ngClass]="{
+    encendido: car.estado == true,
+    apagado: car.estado == false
+  }">
+    {{mensaje}}
+  </h2>
+  <p><b>Marca: </b>{{car.marca}}</p>
+  <p><b>Velocidad: </b>{{car.velocidad}} km/h</p>
+  <button class="btn btn-outline-dark" (click)="encenderCoche()">
+    Start/Stop coche
+  </button><br>
+  <button class="btn btn-primary" (click)="acelerarCoche()">
+    Acelerar
+  </button>
+</div>

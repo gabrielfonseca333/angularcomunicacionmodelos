@@ -1,0 +1,14 @@
+
+<div>
+
+  <div class="card" style="border: 1px solid gold; background-color: lightyellow; padding: 10px;">
+    <h3>{{mensaje}}</h3>
+  </div>
+
+  <br>
+
+  <div *ngFor="let dep of deportes">
+    <app-hijo-deporte [sport]="dep" (seleccionarFavoritoPadre)="seleccionarFavorito($event)"></app-hijo-deporte>
+  </div>
+  
+</div>
